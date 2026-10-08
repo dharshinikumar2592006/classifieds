@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UsedMart - Buy & Sell Used Products</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">🛍️ UsedMart</div>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search products..."
+            onkeyup="searchProducts()"
+        >
+
+        <button onclick="showAddForm()">+ Sell Product</button>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="#products">Products</a>
+        <a href="#sell">Sell</a>
+    </nav>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Add Product Form -->
+        <section id="sell" class="form-section">
+
+            <h2>📦 Sell Your Product</h2>
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Product name"
+            >
+
+            <input
+                type="number"
+                id="productPrice"
+                placeholder="Price ₹"
+            >
+
+            <input
+                type="text"
+                id="productLocation"
+                placeholder="Location"
+            >
+
+            <input
+                type="text"
+                id="sellerName"
+                placeholder="Seller name"
+            >
+
+            <input
+                type="text"
+                id="productImage"
+                placeholder="Image URL"
+            >
+
+            <textarea
+                id="productDescription"
+                placeholder="Product description"
+            ></textarea>
+
+            <button onclick="addProduct()">Post Product</button>
+
+        </section>
+
+
+        <!-- Products -->
+        <section id="products">
+
+            <h2>🔥 Products for Sale</h2>
+
+            <div id="productList" class="product-container"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 UsedMart | Buy & Sell Used Products</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
